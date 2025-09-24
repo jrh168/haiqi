@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>重庆海棋工程机械租赁有限公司 - 专业特种设备服务</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Microsoft YaHei', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* 头部样式 */
+        header {
+            background: linear-gradient(90deg, #1a5fb4 0%, #2c80c5 100%);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            border-bottom: 5px solid #ffa500;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .company-names {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* 主横幅 */
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 50vh;
+            background: url('https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 20px;
+        }
+        
+        .hero h2 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            line-height: 1.4;
+        }
+        
+        /* 服务部分 */
+        .services {
+            padding: 60px 0;
+            background: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: #1a5fb4;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: #ffa500;
+            margin: 15px auto;
+            border-radius: 2px;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .service-card {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+        
+        .service-icon {
+            font-size: 2.5rem;
+            color: #1a5fb4;
+            margin-bottom: 15px;
+            background: #e3f2fd;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        
+        .service-card:hover .service-icon {
+            transform: scale(1.1);
+            background-color: #1a5fb4;
+            color: white;
+        }
+        
+        .service-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        
+        .service-card p {
+            color: #7f8c8d;
+            flex-grow: 1;
+        }
+        
+        /* 最后一个卡片特殊样式 */
+        .practice-card {
+            background: linear-gradient(135deg, #1a5fb4 0%, #2c80c5 100%);
+            color: white;
+        }
+        
+        .practice-card h3,
+        .practice-card p {
+            color: white;
+        }
+        
+        .practice-card .service-icon {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+        
+        /* 价值观部分 */
+        .values {
+            padding: 50px 0;
+            background: #e9ecef;
+            text-align: center;
+        }
+        
+        .values p {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #1a5fb4;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        /* 图片部分 */
+        .image-section {
+            padding: 50px 0;
+            text-align: center;
+            background: white;
+        }
+        
+        .company-image {
+            max-width: 90%;
+            max-height: 500px;
+            border-radius: 8px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+            object-fit: cover;
+        }
+        
+        .company-image:hover {
+            transform: scale(1.02);
+        }
+        
+        /* 底部链接 */
+        .website-link {
+            display: block;
+            text-align: center;
+            padding: 30px 0;
+            background: #2c3e50;
+            color: white;
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+        
+        .website-link:hover {
+            background: #1a5fb4;
+        }
+        
+        /* 页脚 */
+        footer {
+            background: #1a5fb4;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.9rem;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .hero h2 {
+                font-size: 1.6rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .values p {
+                font-size: 1.1rem;
+                padding: 15px;
+            }
+            
+            .section-title {
+                font-size: 1.7rem;
+            }
+            
+            .company-image {
+                max-width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="company-names">
+                <h1>重庆海棋工程机械租赁有限公司</h1>
+                <h1>重庆塔水桥特种作业人员安全技术培训有限公司</h1>
+            </div>
+        </div>
+    </header>
+    
+    <div class="hero">
+        <div class="hero-content">
+            <h2>特种设备登记 检测 年检 租赁</h2>
+            <h2>作业人员培训 考证 证书年审</h2>
+        </div>
+    </div>
+    
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">我们的服务</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>特种设备租赁</h3>
+                    <p>提供各种特种设备的租赁服务，满足您的工程需求</p >
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hard-hat"></i>
+                    </div>
+                    <h3>特种设备作业人员培训</h3>
+                    <p>特种设备作业人员专业技能培训</p >
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>特种设备作业人员考证</h3>
+                    <p>提供各种特种设备操作证书考试服务</p >
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h3>特种设备作业人员证书年审</h3>
+                    <p>便捷高效的证书年审服务，确保您的证书持续有效</p >
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>特种设备登记、检测、年检</h3>
+                    <p>全面的特种设备技术服务和支持，确保设备安全合规</p >
+                </div>
+                
+                <div class="service-card practice-card">
+                    <div class="service-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>练习题库</h3>
+                    <p>特种设备作业人员各工种练习题库，点击了解更多</p >
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="values">
+        <div class="container">
+            <p>诚实守信 不逾越红线 | 以义取利 不唯利是图 | 稳健审慎 不急功近利</p >
+        </div>
+    </section>
+    
+    <section class="image-section">
+        <div class="container">
+           <img src="https://imgtu.com/uploads/u7couie4/t-ab2d4be8e20534602929f64ff8ee2293.webp" alt="ab2d4be8e20534602929f64ff8ee2293.jpg" border="0"/> 
+        </div>
+
+    </section>
+    
+    <a href=" " target="_blank" rel="noopener noreferrer" class="website-link">
+        访问我们的官网: 重庆海棋 www.haiqi.rth1.xyz
+    </a >
+    
+    <footer>
+        <div class="container">
+            <p>© 2023 重庆海棋工程机械租赁有限公司 版权所有</p >
+            <p>电话: 023-16888888 | 地址: 重庆市渝中区168号</p >
+        </div>
+    </footer>
+
+    <script>
+        // 简单的动画效果
+        document.addEventListener('DOMContentLoaded', function() {
+            const serviceCards = document.querySelectorAll('.service-card');
+            
+            serviceCards.forEach((card, index) => {
+                // 添加延迟显示效果
+                card.style.opacity = 0;
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                
+                setTimeout(() => {
+                    card.style.opacity = 1;
+                    card.style.transform = 'translateY(0)';
+                }, 100 + (index * 100));
+            });
+            
+            // 添加滚动动画
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            const animatedElements = document.querySelectorAll('.service-card, .values p, .company-image');
+            animatedElements.forEach(el => {
+                el.style.opacity = 0;
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(el);
+            });
+            
+            // 添加卡片点击效果
+            serviceCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    this.style.transform = 'scale(0.98)';
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 200);
+                    
+                    // 如果是练习题库卡片，跳转到相应页面
+                    if (this.classList.contains('practice-card')) {
+                        // 这里可以添加跳转逻辑
+                        alert('即将跳转到练习题库页面');
+                        // window.location.href = '你的练习题库链接';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
